@@ -1,4 +1,5 @@
-FROM websphere-liberty:webProfile6
+RUN chgrp -R 0 /opt/ibm && chmod -R g=u /opt/ibm
+FROM websphere-liberty:webProfile8
 
 # Add binary deployment artifact to 'dropins' folder
 #RUN wget --directory-prefix=/opt/ibm/wlp/usr/servers/defaultServer/dropins/ $BINARY_DEPLOYMENT_ARTIFACT_URL
